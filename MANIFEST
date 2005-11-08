@@ -1,5 +1,6 @@
 Build.PL
 Changes
+lib/Catalyst/Helper/Model/Gedcom.pm
 lib/Catalyst/Model/Gedcom.pm
 MANIFEST
 META.yml
