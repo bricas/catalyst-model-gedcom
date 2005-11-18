@@ -1,13 +1,13 @@
 package Catalyst::Model::Gedcom;
 
-use base qw( Catalyst::Base Gedcom );
+use base qw( Catalyst::View Gedcom );
 
 use strict;
 use warnings;
 
 use NEXT;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
