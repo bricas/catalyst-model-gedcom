@@ -1,7 +1,7 @@
 Revision history for Perl extension Catalyst::Model::Gedcom.
 
 0.03  Fri Nov 19 2005
-	- Inherit from Catalyst::View
+	- Inherit from Catalyst::Model
 
 0.02  Mon Nov 07 2005
 	- added helper class

@@ -1,6 +1,6 @@
 package Catalyst::Model::Gedcom;
 
-use base qw( Catalyst::View Gedcom );
+use base qw( Catalyst::Model Gedcom );
 
 use strict;
 use warnings;
