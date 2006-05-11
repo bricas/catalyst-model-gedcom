@@ -1,11 +1,9 @@
 package Catalyst::Model::Gedcom;
 
-use base qw( Catalyst::Model Gedcom );
+use base qw( Gedcom );
 
 use strict;
 use warnings;
-
-use NEXT;
 
 our $VERSION = '0.03';
 
@@ -27,7 +25,7 @@ Catalyst::Model::Gedcom - Gedcom Model Class
 	
 	1;
 	
-	my $gedcom = $c->comp( 'MyApp::Model::Gedcom' );
+	my $gedcom = $c->model( 'Gedcom' );
 	
 	my @individuals = $gedcom->individuals;
 
@@ -37,16 +35,15 @@ This is a model class to connect C<Gedcom> files to C<Catalyst>.
 
 =head1 METHODS
 
-=head2 new( )
+=head2 COMPONENT( )
 
 passes your config options to C<Gedcom>'s C<new> method.
 
 =cut
 
-sub new {
-	my( $class, $c, $options ) = @_;
-
-	$class->Gedcom::new( %{ $class->NEXT::new( $c, $options ) } );
+sub COMPONENT {
+    my( $class, $c, $config ) = @_;
+    return $class->new( %$config );
 }
 
 =head1 AUTHOR
@@ -59,7 +56,7 @@ sub new {
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2005 by Brian Cassidy
+Copyright 2006 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
