@@ -3,7 +3,7 @@ package Catalyst::Helper::Model::Gedcom;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -26,7 +26,7 @@ Makes the Gedcom model class.
 =cut
 
 sub mk_compclass {
-    my( $self, $helper, $filename ) = @_;
+    my ( $self, $helper, $filename ) = @_;
 
     die( 'No filename specified' ) unless $filename;
 
@@ -43,7 +43,7 @@ Makes tests for the Gedcom model.
 =cut
 
 sub mk_comptest {
-    my( $self, $helper ) = @_;
+    my ( $self, $helper ) = @_;
 
     $helper->render_file( 'modeltest', $helper->{ test } );
 }
@@ -54,15 +54,11 @@ L<Catalyst::Manual>, L<Catalyst::Test>, L<Catalyst::Helper>
 
 =head1 AUTHOR
 
-=over 4 
-
-=item * Brian Cassidy E<lt>bricas@cpan.orgE<gt>
-
-=back
+Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2005 by Brian Cassidy
+Copyright 2007 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
@@ -70,7 +66,6 @@ it under the same terms as Perl itself.
 =cut
 
 1;
-
 
 __DATA__
 

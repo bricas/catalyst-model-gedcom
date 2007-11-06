@@ -5,7 +5,7 @@ use base qw( Gedcom );
 use strict;
 use warnings;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -13,21 +13,21 @@ Catalyst::Model::Gedcom - Gedcom Model Class
 
 =head1 SYNOPSIS
 
-	# lib/MyApp/Model/Gedcom.pm
-	package MyApp::Model::Gedcom;
-	
-	use base qw( Catalyst::Model::Gedcom );
-	
-	__PACKAGE__->config(
-		gedcom_file => 'root/my.ged',
-		read_only   => 1
-	);
-	
-	1;
-	
-	my $gedcom = $c->model( 'Gedcom' );
-	
-	my @individuals = $gedcom->individuals;
+    # lib/MyApp/Model/Gedcom.pm
+    package MyApp::Model::Gedcom;
+    
+    use base qw( Catalyst::Model::Gedcom );
+    
+    __PACKAGE__->config(
+        gedcom_file => 'root/my.ged',
+        read_only   => 1
+    );
+    
+    1;
+    
+    my $gedcom = $c->model( 'Gedcom' );
+    
+    my @individuals = $gedcom->individuals;
 
 =head1 DESCRIPTION
 
@@ -42,21 +42,17 @@ passes your config options to C<Gedcom>'s C<new> method.
 =cut
 
 sub COMPONENT {
-    my( $class, $c, $config ) = @_;
+    my ( $class, $c, $config ) = @_;
     return $class->new( %$config );
 }
 
 =head1 AUTHOR
 
-=over 4 
-
-=item * Brian Cassidy E<lt>bricas@cpan.orgE<gt>
-
-=back
+Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2006 by Brian Cassidy
+Copyright 2007 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
