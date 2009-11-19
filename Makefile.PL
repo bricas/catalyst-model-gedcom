@@ -1,4 +1,4 @@
-use inc::Module::Install 0.68;
+use inc::Module::Install 0.91;
 
 if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/Catalyst/Model/Gedcom.pm > README' );
@@ -12,5 +12,6 @@ requires 'Gedcom';
 
 test_requires 'Test::More';
 
-auto_install;
+repository "http://github.com/bricas/catalyst-model-gedcom/tree/master";
+
 WriteAll;

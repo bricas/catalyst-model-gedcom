@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::Model::Gedcom.
 
+0.05  Wed Nov 18 2009
+    - repackaged with a new version of Module::Install
+
 0.04  Tue Nov 06 2007
     - switch to Module::Install
 
